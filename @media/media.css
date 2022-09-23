@@ -1,0 +1,59 @@
+.cuadro1,
+.cuadro2,
+.cuadro3,
+.cuadro4{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    color: white;
+}
+.cuadro2{
+    background-color: blue;
+}
+.cuadro3{
+    background-color: green;
+}
+.cuadro4{
+    background-color: rgb(147, 164, 18);
+}
+.contenedor{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+/* Medidas Celulares en vertical */
+@media ( max-width: 576px){
+    .contenedor{
+        width: 100%;
+        height: auto;
+        background-color: gray;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+/* 
+    Medidas Celulares en Horizontal 
+    y tablets
+*/
+@media ( min-width: 577px) and (max-width:1024px) {
+    .contenedor{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+/* 
+    Medidas Compútadores portatiles
+*/
+@media ( min-width: 1025px) and (max-width:1300px) {
+    .contenedor{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .cuadro1,
+    .cuadro2,
+    .cuadro3,
+    .cuadro4{
+        border-radius: 50%;
+    }
+}
